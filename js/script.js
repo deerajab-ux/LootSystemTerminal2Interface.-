@@ -14,8 +14,11 @@ const total = document.getElementById("total");
 
 activateButton.addEventListener("click", function ()
 {
-    let itemName = lootName.value;
-    let itemValue = Number(lootNumber.value);
+    const itemName = lootName.value;
+    const itemValue = Number(lootNumber.value);
+    let totalValue = 0;
+    let lootList = "";
+
 
     if (itemName === "" )
     {
@@ -33,11 +36,17 @@ activateButton.addEventListener("click", function ()
     {
         
     loot.push({name: itemName, value: itemValue}) 
+
+    for (let i = 0; i < loot.length; i++)
+    {
+        lootList += "[" + (i + 1) + "]" + loot[i].name + "-" + loot[i].value + "-"
+    }
+        for (let i = 0; i < loot.length; i++)
+    {
+        totalValue += loot[i].value;
+    }
+    total.innerHTML = totalValue;
+    list.innerHTML = lootList
     }
 
 });
-for (let i = 0; i < loot.length; i++)
-{
-    loot = loot[i].name + "-" + loot[i].value + "-"
-     totalValue += loot[i].value;
-}
