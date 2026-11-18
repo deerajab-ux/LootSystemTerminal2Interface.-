@@ -32,6 +32,6 @@ activateButton.addEventListener("click", function ()
     else 
     {
         
-    loot.push({name: lootName, value: lootNumber})
+    loot.push({name: itemName, value: itemValue}) 
     }
 });
