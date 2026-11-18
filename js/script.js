@@ -16,22 +16,21 @@ activateButton.addEventListener("click", function ()
 {
     validationMessage.innerHTML = "you have clicked the button";
 
-    if (lootName.length === 0)
+    if (lootName.value === "")
     {
-        prompt("PLease enter something in the box")
+        validationMessage.innerHTML = "you need to enter an item";
     }
     else if (isNaN(lootNumber))
     {
-        prompt("Enter a number")
+        validationMessage.innerHTML = "you need to enter a number";
     }
-    else if (isNaN(lootNumber) || lootNumber < 0)
+    else if (lootNumber < 0)
     {
-        prompt("Enter a postiive number")
+        validationMessage.innerHTML = "must be a postive number";
     }
     else 
     {
-        prompt("valid input")
-    }
+        
     loot.push({name: lootName, value: lootNumber})
-
+    }
 });
