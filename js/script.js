@@ -34,4 +34,10 @@ activateButton.addEventListener("click", function ()
         
     loot.push({name: itemName, value: itemValue}) 
     }
+
 });
+for (let i = 0; i < loot.length; i++)
+{
+    loot = loot[i].name + "-" + loot[i].value + "-"
+     totalValue += loot[i].value;
+}
