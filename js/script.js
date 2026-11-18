@@ -14,17 +14,18 @@ const total = document.getElementById("total");
 
 activateButton.addEventListener("click", function ()
 {
-    validationMessage.innerHTML = "you have clicked the button";
+    let itemName = lootName.value;
+    let itemValue = Number(lootNumber.value);
 
-    if (lootName.value === "")
+    if (itemName === "" )
     {
         validationMessage.innerHTML = "you need to enter an item";
     }
-    else if (isNaN(lootNumber))
+    else if (isNaN(itemValue))
     {
         validationMessage.innerHTML = "you need to enter a number";
     }
-    else if (lootNumber < 0)
+    else if (itemValue < 0)
     {
         validationMessage.innerHTML = "must be a postive number";
     }
