@@ -24,7 +24,7 @@ activateButton.addEventListener("click", function ()
     {
         validationMessage.innerHTML = "you need to enter an item";
     }
-    else if (isNaN(itemValue))
+    else if (lootNumber.value === "" || isNaN(itemValue)
     {
         validationMessage.innerHTML = "you need to enter a number";
     }
@@ -39,7 +39,7 @@ activateButton.addEventListener("click", function ()
 
     for (let i = 0; i < loot.length; i++)
     {
-        lootList += "[" + (i + 1) + "]" + loot[i].name + "-" + loot[i].value + "-"
+        lootList += "[" + (i + 1) + "] " + loot[i].name + " - " + loot[i].value + "-"
     }
         for (let i = 0; i < loot.length; i++)
     {
