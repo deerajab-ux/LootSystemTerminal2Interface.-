@@ -24,7 +24,7 @@ activateButton.addEventListener("click", function ()
     {
         validationMessage.innerHTML = "you need to enter an item";
     }
-    else if (lootNumber.value === "" || isNaN(itemValue)
+    else if (lootNumber.value === "" || isNaN(itemValue))
     {
         validationMessage.innerHTML = "you need to enter a number";
     }
